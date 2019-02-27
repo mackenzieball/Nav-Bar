@@ -1,0 +1,70 @@
+
+@import 'base';
+
+/* Add styles here */
+
+//  Global variable scope
+
+$brand-color: hsl(186, 64.52%, 48.63%);
+
+
+.navbar {
+  $height: 60px;
+  align-items: center;
+  background-color: hsl(0, 0%, 97%);
+  display: flex;
+  height: $height;
+  border-bottom: 3px solid hsl(0, 0%, 94%);
+  
+  &::before {
+    content: ' ';
+    border-top: 2px solid $brand-color;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+
+  .logo {
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    padding-left: 1rem;
+  }
+  .nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  
+
+  .menu-item {
+    border-bottom: 2px solid transparent;
+    color: darken(desaturate($brand-color, 40%), 20%);
+    flex-grow: 1;
+    letter-spacing: 0.5px;
+    line-height: $height; 
+    height: $height;
+    text-align: center;
+    text-transform: uppercase;
+    
+
+  &:hover {
+      background-color: hsl(0, 0%, 94%);
+      cursor: pointer;
+      }
+
+      &.active {
+        border-color:lighten(desaturate($brand-color, 30%), 20%);
+      }
+    }
+  }
+  img {
+    height: calc(100% - 1.5rem);
+    width: auto;
+
+  }
+  
+}
+
